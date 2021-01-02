@@ -1,7 +1,7 @@
 const LENGTH_RATIO = 2 / 3;
 const LENGTH_RATIO_DISPERSION = 0.5;
-const FI = 3.1415 / 10;
-const FI_DISPERSION = 0.9;
+const FI = 3.1415 / 8;
+const FI_DISPERSION = 0.8;
 const INITIAL_LENGTH = window.innerHeight / 5;
 const MINIMAL_LENGTH = 1;
 
