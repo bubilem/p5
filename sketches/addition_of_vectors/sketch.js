@@ -96,7 +96,7 @@ function sliderText() {
 function grid() {
   background(0, 0, 0);
   strokeWeight(1);
-  stroke(15);
+  stroke(30);
   noFill();
   let step = 100;
   for (let i = 0; i < window.innerHeight; i += step) {
@@ -107,7 +107,7 @@ function grid() {
     line(xs - i, 0, xs - i, window.innerHeight);
     line(xs + i, 0, xs + i, window.innerHeight);
   }
-  stroke(20);
+  stroke(50);
   for (let i = 1; i < window.innerWidth || i < window.innerHeight; i += 2 * step) {
     circle(xs, ys, i);
   }
