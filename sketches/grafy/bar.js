@@ -7,11 +7,11 @@ class Bar {
     this.w;
     this.h;
     this.acth = 1;
-    this.step = 7;
+    this.step = 1.08;
 
     this.grow = function () {
       if (this.acth < this.h) {
-        this.acth += this.step;
+        this.acth *= this.step;
       }
       if (this.acth > this.h) {
         this.acth = this.h;
@@ -22,7 +22,7 @@ class Bar {
       noStroke();
       fill(100, 110, 120);
       rect(this.x, this.y - this.acth, this.w, this.acth, 7, 7, 0, 0);
-      textSize(10);
+      textSize(14);
       fill(255);
       textAlign(CENTER, CENTER);
       text(this.name + "\n" + this.value, this.x, this.y - this.acth, this.w, this.acth);

@@ -2,11 +2,11 @@ var chart;
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   frameRate(30);
-  chart = new Chart(25, 25, width - 50, height - 50, data);
+  chart = new Chart(25, 25, window.innerWidth - 50, window.innerHeight - 50, data, caption);
 }
 
 function draw() {
-  background(255, 255, 255);
   chart.grow();
+  background(255, 255, 255);
   chart.show();
 }

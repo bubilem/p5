@@ -1,5 +1,6 @@
 class Chart {
-  constructor(x, y, w, h, data) {
+  constructor(x, y, w, h, data, caption) {
+    this.caption = caption;
     this.x = x;
     this.y = y;
     this.w = w;
@@ -16,11 +17,12 @@ class Chart {
       let bar = new Bar();
       bar.name = key;
       bar.value = data[key];
-      bar.x = this.x + i * (this.w / count) + 10;
+      bar.x = this.x + i * (this.w / count) + 5;
       bar.y = this.y + this.h;
-      bar.w = int(this.w / count) - 20;
+      bar.w = int(this.w / count) - 10;
       bar.h = (data[key] / max) * this.h;
-      this.bars[i] = bar;
+      //this.bars[i] = bar;
+      append(this.bars, bar);
     }, this);
 
     this.grow = function () {
@@ -36,6 +38,11 @@ class Chart {
       strokeWeight(2);
       stroke(100, 110, 120);
       line(this.x, this.y + this.h, this.x + this.w, this.y + this.h);
+      textSize(26);
+      noStroke();
+      fill(0);
+      textAlign(CENTER, TOP);
+      text(this.caption, this.x, this.y, this.w, 26);
     };
   }
 }
